@@ -1,0 +1,33 @@
+.work {
+	display: none;
+	@include media(desktop) {
+		display: block;
+		&__title {
+			margin-bottom: 50px;
+			@include secTitle();
+		}
+		&__list {
+			@include flex(row, false, false);
+			gap: 30px;
+		}
+		&__item {
+			position: relative;
+			height: 294px;
+			> div {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				text-transform: uppercase;
+				color: getColor(white);
+				text-align: center;
+				background-color: #2f303acc;
+				padding: 27px 0;
+				font-size: 14px;
+				font-weight: 700;
+				line-height: 16.41px;
+				letter-spacing: 0.03em;
+			}
+		}
+	}
+}

@@ -1,0 +1,82 @@
+@mixin media($breakpoint) {
+	@if $breakpoint == 'mobile' {
+		@media (max-width: 480px) {
+			@content;
+		}
+	} @else if $breakpoint == 'tablet' {
+		@media (min-width: 768px) {
+			@content;
+		}
+	} @else if $breakpoint == 'desktop' {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	}
+}
+@mixin logo($color) {
+	color: $color;
+	font-size: 24px;
+	line-height: 28.18px;
+	font-weight: 700;
+	> span {
+		color: getColor(blue);
+		font-family: getFont(raleway);
+	}
+}
+
+@mixin flex($property: row, $center: false, $beetween: false) {
+	display: flex;
+	@if $property == row {
+		flex-direction: row;
+	} @else if $property == col {
+		flex-direction: column;
+	}
+	@if $center == true {
+		justify-content: center;
+		align-items: center;
+	}
+	@if $beetween == true {
+		justify-content: space-between;
+	}
+}
+@mixin grid-3x3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+@mixin grid-2x4 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+@mixin transition($property) {
+	transition: $property 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin secTitle {
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 42.19px;
+	text-align: center;
+	color: getColor(dark);
+	letter-spacing: 0.03em;
+}
+
+@mixin button($px: 10px, $py: 24px) {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 30px;
+	text-align: center;
+	padding: $px $py;
+	background-color: getColor(blue);
+	color: getColor(white);
+	border: none;
+	border-radius: 4px;
+	box-shadow: 0px 4px 4px 0px #00000026;
+	letter-spacing: 0.06em;
+	@include transition(background-color);
+
+	&:hover,
+	&:focus {
+		background-color: #239cff;
+	}
+}

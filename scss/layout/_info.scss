@@ -1,0 +1,48 @@
+.info {
+	margin: 60px 0;
+	> .container {
+		@include flex(col, true, false);
+		padding: 0 15px;
+		@include media(desktop) {
+			padding: 0;
+		}
+	}
+	&__list {
+		@include flex(col, false, false);
+		gap: 30px;
+		flex-wrap: wrap;
+		@include media(tablet) {
+			@include flex(row, false, false);
+		}
+	}
+	&__item {
+		@include flex(col, false, false);
+		@include media(tablet) {
+			flex-basis: calc((100% - 30px) / 2);
+			align-items: normal;
+		}
+		@include media(desktop) {
+			flex-basis: 270px;
+		}
+	}
+	&__icon {
+		background-color: getColor(light);
+		width: 100%;
+		@include flex(row, true, false);
+		height: 120px;
+		margin-bottom: 30px;
+	}
+	&__title {
+		font-size: 14px;
+		font-weight: 700;
+		color: getColor(dark);
+		margin-bottom: 10px;
+		line-height: 16.41px;
+	}
+	&__text {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 24px;
+		color: getColor(gray);
+	}
+}

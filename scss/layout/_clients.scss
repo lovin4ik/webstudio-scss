@@ -1,0 +1,44 @@
+.clients {
+	> .container {
+		padding: 0 15px;
+		@include media(desktop) {
+			padding: 0;
+		}
+	}
+	&__title {
+		margin-bottom: 50px;
+		@include secTitle();
+	}
+	&__list {
+		@include flex(row, true, false);
+		gap: 30px;
+		flex-wrap: wrap;
+		> li {
+			@include flex(row, true, false);
+			@include transition(border);
+			flex-basis: calc((100% - 30px) / 2);
+			border: solid 1px #afb1b8;
+			border-radius: 4px;
+			cursor: pointer;
+			height: 92px;
+
+			> a {
+				fill: #afb1b8;
+				@include transition(fill);
+			}
+
+			&:hover {
+				border-color: getColor(blue);
+				> a {
+					fill: getColor(blue);
+				}
+			}
+			@include media(tablet) {
+				flex-basis: calc((100% - 60px) / 3);
+			}
+			@include media(desktop) {
+				flex-basis: calc((100% - 150px) / 6);
+			}
+		}
+	}
+}
