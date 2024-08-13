@@ -1,14 +1,24 @@
 @import './base/reset';
+
+// Utils
+
 @import './utils/variables';
 @import './utils/mixins';
 @import './utils/function';
 @import './utils/fonts';
 
+// Common
+
 @import './base/common';
+
+// Components
 
 @import './components/container';
 
+//  Layout
+
 @import './layout/header';
+
 @import './layout/hero';
 @import './layout/info';
 @import './layout/work';
@@ -17,4 +27,5 @@
 
 @import './layout/footer';
 
+// Other
 @import './layout/modal';

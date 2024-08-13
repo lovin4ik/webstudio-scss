@@ -26,6 +26,7 @@
 	&__logo {
 		@include logo(#000);
 	}
+
 	&__burger {
 		padding: 12px 8px;
 		@include flex(col, false, false);
