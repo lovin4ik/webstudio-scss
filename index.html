@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="./css/main.min.css" />
 		<link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
 		<script type="module" src="./js/modal.js" defer></script>
+		<script type="module" src="./js/burger-menu.js" defer></script>
 	</head>
 	<body>
 		<header class="header">
@@ -23,10 +24,10 @@
 							<a href="./index.html">Студія</a>
 						</li>
 						<li class="header__menu__item">
-							<a href="./index.html">Портфоліо</a>
+							<a href="./portfolio/portfolio.html">Портфоліо</a>
 						</li>
 						<li class="header__menu__item">
-							<a href="./index.html">Контакти</a>
+							<a href="#footer">Контакти</a>
 						</li>
 					</ul>
 
@@ -189,7 +190,12 @@
 					<h2 class="team__title">Наша команда</h2>
 					<ul class="team__list">
 						<li class="team__item">
-							<img src="./images/igor.jpg" alt="Ігор" width="270" />
+							<img
+								src="./images/igor.jpg"
+								alt="Ігор"
+								width="270"
+								srcset="./images/igor.jpg 1x, ./images/igor-@2x.jpg 2x"
+							/>
 							<h3>Ігор Дем'яненко</h3>
 							<p>Product Designer</p>
 							<ul class="team__item__social">
@@ -208,7 +214,12 @@
 							</ul>
 						</li>
 						<li class="team__item">
-							<img src="./images/olga.jpg" alt="Ольга" width="270" />
+							<img
+								src="./images/olga.jpg"
+								alt="Ольга"
+								width="270"
+								srcset="./images/olga.jpg 1x, ./images/olga-@2x.jpg 2x"
+							/>
 							<h3>Ольга Рєпіна</h3>
 							<p>Frontend Developer</p>
 							<ul class="team__item__social">
@@ -227,7 +238,12 @@
 							</ul>
 						</li>
 						<li class="team__item">
-							<img src="./images/mykola.jpg" alt="Микола" width="270" />
+							<img
+								src="./images/mykola.jpg"
+								alt="Микола"
+								width="270"
+								srcset="./images/mykola.jpg 1x, ./images/mikola-@2x.jpg 2x"
+							/>
 							<h3>Микола Тарасов</h3>
 							<p>Marketing</p>
 							<ul class="team__item__social">
@@ -246,7 +262,12 @@
 							</ul>
 						</li>
 						<li class="team__item">
-							<img src="./images/mykhailo.jpg" alt="Михайло" width="270" />
+							<img
+								src="./images/mykhailo.jpg"
+								alt="Михайло"
+								width="270"
+								srcset="./images/mykhailo.jpg 1x, ./images/mihailo-@2x.jpg 2x"
+							/>
 							<h3>Михайло Єрмаков</h3>
 							<p>UI Designer</p>
 							<ul class="team__item__social">
@@ -317,7 +338,7 @@
 				</div>
 			</section>
 		</main>
-		<footer class="footer">
+		<footer class="footer" id="footer">
 			<div class="container">
 				<div class="footer__menu">
 					<a href="./index.html" class="footer__logo"><span>Web</span>Studio</a>
@@ -363,10 +384,32 @@
 			</div>
 		</footer>
 
-		<div class="burger">
+		<div class="burger is-hidden">
+			<button class="burger__close">
+				<svg class="icon" width="18px" height="18px">
+					<use xlink:href="./images/sprite.svg#close"></use>
+				</svg>
+			</button>
+
 			<nav class="burger__nav">
-				<ul class="burger__menu"></ul>
+				<ul class="burger__menu">
+					<li><a href="./index.html">Студія</a></li>
+					<li><a href="./portfolio/portfolio.html">Портфоліо</a></li>
+					<li><a href="#footer">Контакти</a></li>
+				</ul>
 			</nav>
+
+			<address class="burger__address">
+				<a href="tel:+380961111111">+38 096 111 11 11</a>
+				<a href="mailto:info@devstudio.com">info@devstudio.com</a>
+			</address>
+
+			<ul class="burger__links">
+				<li><a href="./index.html">Instagram</a></li>
+				<li><a href="./index.html">Twitter</a></li>
+				<li><a href="./index.html">Facebook</a></li>
+				<li><a href="./index.html">LinkedIn</a></li>
+			</ul>
 		</div>
 	</body>
 </html>

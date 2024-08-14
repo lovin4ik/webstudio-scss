@@ -5,9 +5,13 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 10px 15px;
+		padding: 16px 15px;
 		@include media(tablet) {
-			padding: 25px 15px;
+			padding: 26px 15px;
+		}
+
+		@include media(desktop) {
+			padding: 24px 0 25px 0;
 		}
 	}
 	&__nav {
@@ -80,10 +84,10 @@
 						background-color: getColor(blue);
 						border-radius: 2px;
 						position: absolute;
-						bottom: -30px;
+						bottom: -38px;
 
-						@include media(tablet) {
-							bottom: -39px;
+						@include media(desktop) {
+							bottom: -30px;
 						}
 					}
 				}

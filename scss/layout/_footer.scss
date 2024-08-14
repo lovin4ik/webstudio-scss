@@ -151,8 +151,19 @@
 			}
 
 			> button {
-				@include button(10px, 28px);
 				@include flex(row, true, false);
+				box-shadow: 0px 4px 4px 0px #00000026;
+				@include transition(background-color);
+				background-color: getColor(blue);
+				color: getColor(white);
+				letter-spacing: 0.06em;
+				border-radius: 4px;
+				text-align: center;
+				line-height: 30px;
+				padding: 10px 28px;
+				font-weight: 700;
+				font-size: 16px;
+				border: none;
 				gap: 12px;
 				margin-top: 20px;
 
@@ -161,6 +172,11 @@
 					margin-left: 12px;
 				}
 				fill: getColor(white);
+
+				&:hover,
+				&:focus {
+					background-color: #239cff;
+				}
 			}
 		}
 	}

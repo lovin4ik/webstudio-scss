@@ -1,0 +1,121 @@
+.burger {
+	min-width: 100vw;
+	min-height: 100vh;
+	background: #ffffff;
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+
+	&.is-hidden {
+		transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+			opacity 0 cubic-bezier(0.4, 0, 0.2, 1) 0;
+
+		transform: translateX(100%);
+
+		@include transition(transform);
+	}
+
+	&__close {
+		background-color: transparent;
+		position: absolute;
+		top: 10px;
+		right: 15px;
+		padding: 11px 10px 10px 11px;
+		@include transition(fill);
+
+		> .icon {
+			@include transition(transform);
+		}
+
+		&:hover,
+		&:focus {
+			fill: getColor(blue);
+			> .icon {
+				transform: rotate(180deg);
+			}
+		}
+	}
+	&__nav {
+		margin-bottom: calc(100vh - 48px - 48px - 210px - 163px - 22px);
+	}
+	&__menu {
+		margin: 48px 0 0 40px;
+		> li {
+			&:not(:last-child) {
+				margin-bottom: 32px;
+			}
+
+			> a {
+				@include transition(color);
+				color: getColor(dark);
+				font-size: 40px;
+				font-weight: 500;
+				line-height: 46.88px;
+			}
+
+			&:hover,
+			&:focus {
+				> a {
+					color: getColor(blue);
+				}
+			}
+		}
+	}
+
+	&__address {
+		margin: 68px 40px 0 40px;
+		> a {
+			@include transition(color);
+			color: getColor(gray);
+			font-size: 24px;
+			font-weight: 500;
+			line-height: 28.13px;
+			display: block;
+
+			&:hover,
+			&:focus {
+				color: getColor(blue);
+			}
+
+			&:first-child {
+				margin-bottom: 32px;
+				font-size: 34px;
+			}
+		}
+	}
+
+	&__links {
+		@include flex(row, false, false);
+		flex-wrap: wrap;
+		margin: 64px 0 48px 40px;
+
+		gap: 20px;
+
+		> li {
+			position: relative;
+			&:not(:last-child) {
+				&::after {
+					content: '';
+					width: 1px;
+					height: 22px;
+					background-color: #21212133;
+					margin-left: 20px;
+					position: absolute;
+					top: 0px;
+					right: -10px;
+				}
+			}
+			> a {
+				@include transition(color);
+				color: getColor(blue);
+				font-size: 18px;
+				font-weight: 500;
+				line-height: 22px;
+				letter-spacing: 0.02em;
+			}
+		}
+	}
+}

@@ -173,7 +173,18 @@
 			> button {
 				background-color: getColor(blue);
 				color: getColor(white);
-				@include button(10px, 52px);
+				box-shadow: 0px 4px 4px 0px #00000026;
+				@include transition(background-color);
+				background-color: getColor(blue);
+				color: getColor(white);
+				letter-spacing: 0.06em;
+				border-radius: 4px;
+				text-align: center;
+				line-height: 30px;
+				padding: 10px 52px;
+				font-weight: 700;
+				font-size: 16px;
+				border: none;
 				margin: 0 auto;
 				display: block;
 			}

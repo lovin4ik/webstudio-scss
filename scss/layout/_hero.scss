@@ -5,17 +5,36 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 480px 400px, 480px 400px;
+
+	@media (min-device-pixel-ratio: 2) {
+		background-image: linear-gradient(0deg, #2f303a66, #2f303a66),
+			url(../images/hero-bg-sm-@2x.png);
+	}
+
 	@include media(tablet) {
 		background-image: linear-gradient(0deg, #2f303a66, #2f303a66),
 			url(../images/hero-bg-md.png);
 		background-size: 768px 400px, 768px 400px;
+
+		@media (min-device-pixel-ratio: 2) {
+			background-image: linear-gradient(0deg, #2f303a66, #2f303a66),
+				url(../images/hero-bg-md-@2x.png);
+		}
 	}
+
 	@include media(desktop) {
 		background-image: linear-gradient(0deg, #2f303a66, #2f303a66),
 			url(../images/hero-bg.png);
 		background-size: 1600px 600px, 1600px 600px;
+
 		padding: 200px 0;
+
+		@media (min-device-pixel-ratio: 2) {
+			background-image: linear-gradient(0deg, #2f303a66, #2f303a66),
+				url(../images/hero-bg-@2x.png);
+		}
 	}
+
 	> .container {
 		@include flex(col, true, false);
 	}
@@ -36,10 +55,26 @@
 		}
 	}
 	&__button {
-		@include button;
+		box-shadow: 0px 4px 4px 0px #00000026;
+		@include transition(background-color);
+		background-color: getColor(blue);
+		color: getColor(white);
+		letter-spacing: 0.06em;
+		border-radius: 4px;
+		text-align: center;
+		line-height: 30px;
+		padding: 10px 24px;
+		font-weight: 700;
+		font-size: 16px;
+		border: none;
+
+		&:hover,
+		&:focus {
+			background-color: #239cff;
+		}
 
 		@include media(desktop) {
-			@include button(12px, 30px);
+			padding: 8px 32px;
 		}
 	}
 }
