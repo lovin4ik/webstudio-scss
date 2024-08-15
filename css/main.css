@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  outline: 1px solid palevioletred;
 }
 
 *::after,
@@ -751,6 +752,11 @@ body.no-scroll {
 .footer__subscribe > form > input:hover, .footer__subscribe > form > input:focus {
   border-color: #2196f3;
 }
+@media (max-width: 480px) {
+  .footer__subscribe > form > input {
+    width: 280px;
+  }
+}
 .footer__subscribe > form > button {
   display: flex;
   flex-direction: row;
@@ -1139,7 +1145,7 @@ body.no-scroll {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio__list > li > a > .overlay {
-  height: 294px;
+  height: auto;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -1167,6 +1173,12 @@ body.no-scroll {
   opacity: 1;
   transform: translateY(100%);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (max-width: 480px) {
+  .portfolio__list > li > a > .overlay::after {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 .portfolio__list > li > a > .portfolio__list__text {
   padding: 20px 24px;

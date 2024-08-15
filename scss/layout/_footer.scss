@@ -148,6 +148,10 @@
 				&:focus {
 					border-color: getColor(blue);
 				}
+
+				@include media(mobile) {
+					width: calc(320px - 40px);
+				}
 			}
 
 			> button {
