@@ -464,6 +464,11 @@ body.no-scroll {
     width: 270px;
   }
 }
+@media (max-width: 480px) {
+  .team__item {
+    width: calc(100% - 10px);
+  }
+}
 .team__item > img {
   width: 100%;
 }
