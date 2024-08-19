@@ -75,6 +75,11 @@
 			line-height: 28.13px;
 			display: block;
 
+			@include media(mobile) {
+				font-size: 18px;
+				line-height: 21.09px;
+			}
+
 			&:hover,
 			&:focus {
 				color: getColor(blue);
@@ -83,6 +88,11 @@
 			&:first-child {
 				margin-bottom: 32px;
 				font-size: 34px;
+
+				@include media(mobile) {
+					font-size: 24px;
+					line-height: 28.13px;
+				}
 			}
 		}
 	}
@@ -115,6 +125,10 @@
 				font-weight: 500;
 				line-height: 22px;
 				letter-spacing: 0.02em;
+
+				@include media(mobile) {
+					font-size: 14px;
+				}
 			}
 		}
 	}

@@ -231,13 +231,27 @@
 					<h2 class="team__title">Наша команда</h2>
 					<ul class="team__list">
 						<li class="team__item">
-							<img
-								src="./images/igor.jpg"
-								alt="Ігор"
-								width="270"
-								height="auto"
-								srcset="./images/igor.jpg 1x, ./images/igor-@2x.jpg 2x"
-							/>
+							<picture>
+								<source
+									media="(min-width: 1200px)"
+									srcset="./images/team/igor.jpg 1x, ./images/team/igor-2x 2x"
+								/>
+								<source
+									media="(min-width: 768px)"
+									srcset="
+										./images/team/igor-md.jpg 1x,
+										./images/team/igor-md-2x  2x
+									"
+								/>
+								<source
+									media="(min-width: 480px)"
+									srcset="
+										./images/team/igor-sm.jpg 1x,
+										./images/team/igor-sm-2x  2x
+									"
+								/>
+								<img src="./images/team/igor.jpg" alt="igor" />
+							</picture>
 							<h3>Ігор Дем'яненко</h3>
 							<p>Product Designer</p>
 							<ul class="team__item__social">
@@ -258,15 +272,24 @@
 						<li class="team__item">
 							<picture>
 								<source
-									srcset="./images/olga.jpg 1x, ./images/olga-@2x.jpg 2x"
+									media="(min-width: 1200px)"
+									srcset="./images/team/olga.jpg 1x, ./images/team/olga-2x 2x"
 								/>
-								<img
-									src="./images/olga.jpg"
-									alt="Ольга"
-									width="270"
-									height="auto"
-									srcset=""
+								<source
+									media="(min-width: 768px)"
+									srcset="
+										./images/team/olga-md.jpg 1x,
+										./images/team/olga-md-2x  2x
+									"
 								/>
+								<source
+									media="(min-width: 480px)"
+									srcset="
+										./images/team/olga-sm.jpg 1x,
+										./images/team/olga-sm-2x  2x
+									"
+								/>
+								<img src="./images/team/olga.jpg" alt="igor" />
 							</picture>
 
 							<h3>Ольга Рєпіна</h3>
@@ -287,13 +310,30 @@
 							</ul>
 						</li>
 						<li class="team__item">
-							<img
-								src="./images/mykola.jpg"
-								alt="Микола"
-								width="270"
-								height="auto"
-								srcset="./images/mykola.jpg 1x, ./images/mikola-@2x.jpg 2x"
-							/>
+							<picture>
+								<source
+									media="(min-width: 1200px)"
+									srcset="
+										./images/team/mikola.jpg 1x,
+										./images/team/mikola-2x  2x
+									"
+								/>
+								<source
+									media="(min-width: 768px)"
+									srcset="
+										./images/team/mikola-md.jpg 1x,
+										./images/team/mikola-md-2x  2x
+									"
+								/>
+								<source
+									media="(min-width: 480px)"
+									srcset="
+										./images/team/mikola-sm.jpg 1x,
+										./images/team/mikola-sm-2x  2x
+									"
+								/>
+								<img src="./images/team/mikola.jpg" alt="igor" />
+							</picture>
 							<h3>Микола Тарасов</h3>
 							<p>Marketing</p>
 							<ul class="team__item__social">
@@ -312,13 +352,30 @@
 							</ul>
 						</li>
 						<li class="team__item">
-							<img
-								src="./images/mykhailo.jpg"
-								alt="Михайло"
-								width="270"
-								height="auto"
-								srcset="./images/mykhailo.jpg 1x, ./images/mihailo-@2x.jpg 2x"
-							/>
+							<picture>
+								<source
+									media="(min-width: 1200px)"
+									srcset="
+										./images/team/mihailo.jpg 1x,
+										./images/team/mihailo-2x  2x
+									"
+								/>
+								<source
+									media="(min-width: 768px)"
+									srcset="
+										./images/team/mihailo-md.jpg 1x,
+										./images/team/mihailo-md-2x  2x
+									"
+								/>
+								<source
+									media="(min-width: 480px)"
+									srcset="
+										./images/team/mihailo-sm.jpg 1x,
+										./images/team/mihailo-sm-2x  2x
+									"
+								/>
+								<img src="./images/team/mihailo.jpg" alt="igor" />
+							</picture>
 							<h3>Михайло Єрмаков</h3>
 							<p>UI Designer</p>
 							<ul class="team__item__social">
